@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Signo Zodiacal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f4f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: white;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 400px;
+        }
+        h1 {
+            color: #4a90e2;
+        }
+        input {
+            margin: 10px 0;
+            padding: 10px;
+            width: 80%;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            background-color: #4a90e2;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #357ab7;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Descubre tu Signo Zodiacal</h1>
+        <p>Ingresa tu mes y día de nacimiento</p>
+        <input type="number" id="mes" placeholder="Mes (1-12)" />
+        <input type="number" id="dia" placeholder="Día (1-31)" />
+        <br>
+        <button onclick="calcularSigno()">Descubrir mi signo</button>
+    </div>
+
+    <script>
+        function calcularSigno() {
+            var mes = document.getElementById('mes').value;
+            var dia = document.getElementById('dia').value;
+
+            mes = parseInt(mes);
+            dia = parseInt(dia);
+
+            var resultado;
+
+            if(mes == 3 && dia >= 21 || mes == 4 && dia <= 20){
+                alert("Tu signo es Aries!");
+            }
+            else if(mes == 4 && dia >= 21 || mes == 5 && dia <= 20){
+                alert("Tu signo es Tauro!");
+            }
+            else if(mes == 5 && dia >= 21 || mes == 6 && dia <= 20){
+                alert("Tu signo es Géminis!");
+            }
+            else if(mes == 6 && dia >= 21 || mes == 7 && dia <= 22){
+                alert("Tu signo es Cáncer!");
+            }
+            else if(mes == 7 && dia >= 23 || mes == 8 && dia <= 23){
+                alert("Tu signo es Leo!");
+            }   
+            else if(mes == 8 && dia >= 24 || mes == 9 && dia <= 22){
+                alert("Tu signo es Virgo!");
+            }
+            else if(mes == 9 && dia >= 23 || mes == 10 && dia <= 23){
+                alert("Tu signo es Libra!");
+            }
+            else if(mes == 10 && dia >= 24 || mes == 11 && dia <= 22){
+                alert("Tu signo es Escorpio!");
+            }
+            else if(mes == 11 && dia >= 23 || mes == 12 && dia <= 21){
+                alert("Tu signo es Sagitario!");
+            }
+            else if(mes == 12 && dia >= 22 || mes == 1 && dia <= 20){
+                alert("Tu signo es Capricornio!");
+            }
+            else if(mes == 1 && dia >= 21 || mes == 2 && dia <= 19){
+                alert("Tu signo es Acuario!");
+            }
+            else if(mes == 2 && dia >= 20 || mes == 3 && dia <= 20){
+                alert("Tu signo es Piscis!");
+            }
+        }
+    </script>
+</body>
+</html>

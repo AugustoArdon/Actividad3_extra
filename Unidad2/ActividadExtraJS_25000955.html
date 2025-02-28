@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Adivinanza</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+        #game-container {
+            width: 50%;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input, button {
+            margin: 10px;
+            padding: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div id="game-container">
+        <h1>Juego de Adivinanza</h1>
+        <p>Ingresa tu nombre y número de carnet para comenzar:</p>
+        <input type="text" id="nombre" placeholder="Nombre">
+        <input type="text" id="carnet" placeholder="Número de carnet">
+        <button onclick="iniciarJuego()">Iniciar Juego</button>
+        <div id="game" style="display: none;">
+            <p>Adivina el número de la computadora (1-9):</p>
+            <input type="number" id="numeroUsuario" min="1" max="9">
+            <button onclick="verificarNumero()">Enviar</button>
+            <p id="resultado"></p>
+            <button id="reiniciar" style="display: none;" onclick="reiniciarJuego()">Jugar de Nuevo</button>
+            <p id="datosUsuario" style="display: none;"></p>
+        </div>
+    </div>
+    <script>
+        let numeroComputadora;
+        let nombreUsuario;
+        let numeroCarnet;
+
+        function iniciarJuego() {
+            nombreUsuario = document.getElementById("nombre").value;
+            numeroCarnet = document.getElementById("carnet").value;
+            if (!nombreUsuario || !numeroCarnet) {
+                alert("Por favor, ingrese su nombre y número de carnet.");
+                return;
+            }
+            numeroComputadora = Math.floor(Math.random() * 9) + 1;
+            document.getElementById("game").style.display = "block";
+        }
+
+        function verificarNumero() {
+            let numeroUsuario = parseInt(document.getElementById("numeroUsuario").value);
+            if (numeroUsuario < 1 || numeroUsuario > 9) {
+                alert("Por favor, ingrese un número entre 1 y 9.");
+                return;
+            }
+            let resultado = numeroUsuario > numeroComputadora ? "MAYOR" : 
+                            numeroUsuario < numeroComputadora ? "MENOR" : "IGUAL";
+            let opcion = prompt("¿Tu elección fue (mayor), (menor) o (igual)?").toUpperCase();
+            let mensaje = `La computadora eligió ${numeroComputadora}, usted eligió ${numeroUsuario}. Su elección es ${resultado}. `;
+            mensaje += (opcion === resultado) ? "¡Ha adivinado!" : "¡Inténtelo de nuevo!";
+            document.getElementById("resultado").innerText = mensaje;
+            document.getElementById("reiniciar").style.display = "block";
+        }
+
+        function reiniciarJuego() {
+            let jugarDeNuevo = confirm("¿Quieres jugar otra vez?");
+            if (jugarDeNuevo) {
+                location.reload();
+            } else {
+                document.getElementById("datosUsuario").innerText = `Nombre: ${nombreUsuario}\nNúmero de Carnet: ${numeroCarnet}`;
+                document.getElementById("datosUsuario").style.display = "block";
+                document.getElementById("reiniciar").style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
