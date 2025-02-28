@@ -1,0 +1,3 @@
+Unidad 2
+Profundizando en la programación.
+ Esta parte del curso estuvo enfocada en los fundamentos del código, como los tipos de datos y operadores, que ayudan a definir cómo manipular la información dentro de un programa. Me pareció muy útil conocer las estructuras de control, ya que permiten que los programas tomen decisiones y repitan acciones sin necesidad de escribir líneas de código innecesarias. Los bucles fueron un poco complicados al principio, especialmente entender cuándo usar "for" o "while", pero con práctica logré manejarlos mejor. Considero que esta unidad fue clave para entender la lógica que sigue un programa al ejecutarse.
