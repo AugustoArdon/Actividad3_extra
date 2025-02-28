@@ -1,3 +1,0 @@
-Unidad 1
-Primeros pasos en programación.
-Esta unidad me sirvió para entender la base de la programación y cómo funcionan las computadoras. Aprendí sobre el sistema binario y su importancia en la informática, aunque al principio me costó un poco captar cómo los números y letras pueden representarse con ceros y unos. También vi temas como la lógica y los algoritmos, que resultaron fundamentales para pensar de forma estructurada al programar. Me parecieron muy importantes los algoritmos, porque ayudan a organizar las ideas antes de escribir código. Los editores de texto y entornos de desarrollo fueron interesantes, ya que facilitan mucho la escritura y prueba de programas.

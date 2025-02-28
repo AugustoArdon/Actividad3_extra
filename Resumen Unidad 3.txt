@@ -1,3 +1,0 @@
-Unidad 3
-Trabajo en equipo y control de versiones.
-En la última unidad aprendí sobre GIT y GitHub, herramientas esenciales para manejar versiones de código y colaborar en equipo. Al inicio, usar GIT desde la terminal fue algo confuso, ya que tiene varios comandos y opciones, pero poco a poco me acostumbré. Me pareció interesante ver cómo GitHub permite compartir proyectos y trabajar con otros sin perder cambios importantes. Las instrucciones básicas de GIT fueron de gran ayuda, y me di cuenta de lo importante que es llevar un buen control del código en cualquier proyecto.
