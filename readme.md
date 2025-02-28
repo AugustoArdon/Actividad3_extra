@@ -1,4 +1,4 @@
-##¿Por qué elegí la licencia MIT?
+¿Por qué elegí la licencia MIT?
 
 La licencia MIT es una de las más simples y flexibles. Básicamente, le dice a cualquiera que puede usar, copiar,
 modificar y compartir mi código libremente, siempre que me den crédito por haberlo creado.
